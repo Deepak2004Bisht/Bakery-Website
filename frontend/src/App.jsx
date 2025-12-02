@@ -12,6 +12,8 @@ import SetUsername from "./components/auth/SetUsername";
 import Login from "./components/auth/Login";
 import ContactUs from "./components/ContactUs";
 import ForgetPassword from "./components/auth/ForgetPassword";
+import ResetPassword from "./components/auth/ResetPassword";
+import VerifyForgetPasswordOTP from "./components/auth/VerifyForgetPasswordOTP";
 
 export default function App() {
   return (
@@ -87,6 +89,22 @@ export default function App() {
         element={
           <AuthLayout>
             <ForgetPassword />
+          </AuthLayout>
+        }
+      />
+      <Route
+        path="/reset-password"
+        element={
+          <AuthLayout>
+            <ResetPassword />
+          </AuthLayout>
+        }
+      />
+      <Route
+        path="/otp-verify"
+        element={
+          <AuthLayout>
+            <VerifyForgetPasswordOTP />
           </AuthLayout>
         }
       />
